@@ -1,19 +1,25 @@
-/*Global variables:
+/*
+Global variables:
 1. items -> an array of the todo items stored in the localStorage
-2. todoitemsList -> the to do section `ul`, onto which the localStorage items will be attached/appended*/
+2. todoitemsList -> the to do section `ul`, onto which the localStorage items will be attached/appended
+*/
 let items = JSON.parse(localStorage.getItem('items')) || [];
 let todoItemsList = document.querySelector('.items ul');
 
-/*3. completedItems -> an array of completed todo items stored in the localStorage
-4. completedItemsList -> the completed item section `ul`*/
+/*
+3. completedItems -> an array of completed todo items stored in the localStorage
+4. completedItemsList -> the completed item section `ul`
+*/
 let completedItems = JSON.parse(localStorage.getItem('completedItems')) || [];
 let completedItemsList = document.querySelector('.completed-items ul');
 
-/*functions:
+/*
+functions:
 1. addFunction ->   called by the `add` button. Adds an item to the localStorage
 2. doneFunction ->  called by the `done` button. Adds the given item to completed items on localStorage
 3. deleteFunction -> called by the `delete` button. Deletes all items from localStorage
-4. populateTodoList -> populates a todo list to show the items stored on localStorage*/
+4. populateTodoList -> populates a todo list to show the items stored on localStorage
+*/
 
 function addFunction () {
   //step 1. get the item to be added.
